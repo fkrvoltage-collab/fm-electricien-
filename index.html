@@ -1,0 +1,186 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FM Elec - Électricien à Montpellier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        header {
+            background-color: #1a202c;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 0;
+            color: #cbd5e0;
+            font-size: 1.1em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2b6cb0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        .services, .reviews, .contact {
+            margin-bottom: 35px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #3182ce;
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+        }
+        button {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #2b6cb0;
+        }
+        .review-card {
+            background: #f7fafc;
+            padding: 15px;
+            border-left: 4px solid #3182ce;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .review-card p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #718096;
+            font-size: 0.9em;
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FM Elec</h1>
+        <p>Votre électricien professionnel à Montpellier et ses environs</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Section Nos Services -->
+        <div class="services">
+            <h2>Nos Services</h2>
+            <ul>
+                <li>Dépannage électrique en urgence (7j/7)</li>
+                <li>Mise aux normes de tableaux électriques</li>
+                <li>Installation de prises, interrupteurs et éclairages intérieurs/extérieurs</li>
+                <li>Recherche de pannes et diagnostics</li>
+                <li>Domotique et sécurité (alarmes, caméras)</li>
+            </ul>
+        </div>
+
+        <!-- Section Avis Clients -->
+        <div class="reviews">
+            <h2>Avis Clients</h2>
+            <div class="review-card">
+                <p><strong>Thomas L.</strong> - ⭐⭐⭐⭐⭐</p>
+                <p>"Intervention rapide suite à une coupure totale de courant à Montpellier. Professionnel efficace et très aimable !"</p>
+            </div>
+            <div class="review-card">
+                <p><strong>Sarah M.</strong> - ⭐⭐⭐⭐⭐</p>
+                <p>"Rénovation complète du tableau électrique de notre appartement. Travail propre, soigné et de bon conseil. Je recommande."</p>
+            </div>
+        </div>
+
+        <!-- Section Contact / Devis (Relié à Formspree) -->
+        <div class="contact">
+            <h2>Demande de Devis Gratuit</h2>
+            <p>Remplissez le formulaire ci-dessous pour recevoir une estimation rapide directement sur notre boîte mail.</p>
+
+            <form action="https://formspree.io/f/mdekvyzd" method="POST">
+                <div class="form-group">
+                    <label for="nom">Votre Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex: Jean Dupont" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Votre Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Ex: 06 12 34 56 78" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email_client">Votre Adresse E-mail</label>
+                    <input type="email" id="email_client" name="email" placeholder="Ex: jean.dupont@exemple.fr" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre Projet / Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Décrivez votre besoin en électricité..." required></textarea>
+                </div>
+
+                <!-- Champ anti-spam optionnel pour Formspree -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit">Envoyer la demande</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 FM Elec - Montpellier. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
