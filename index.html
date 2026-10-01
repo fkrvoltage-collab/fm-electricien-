@@ -1,8 +1,7 @@
-
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FM Elec - Électricien Professionnel à Montpellier</title>
     <style>
@@ -13,24 +12,63 @@
             --text: #334155;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; scroll-behavior: smooth; }
         
         header {
             background: var(--primary);
             color: white;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
             text-align: center;
             border-bottom: 4px solid var(--accent);
         }
-        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: #ffffff; }
-        header p { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 1.5rem; }
         
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 { font-size: 2.5rem; color: #ffffff; margin-bottom: 0.2rem; }
+        header p { font-size: 1.15rem; color: #cbd5e1; }
+        
+        .badge-devis {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
         .cta-phone {
             display: inline-block;
             background: var(--accent);
             color: #0f172a;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             padding: 0.8rem 1.8rem;
             border-radius: 50px;
             text-decoration: none;
@@ -39,7 +77,21 @@
         }
         .cta-phone:hover { transform: scale(1.05); }
 
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .cta-scroll {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .cta-scroll:hover { background: white; color: var(--primary); }
+
+        .container { max-width: 800px; margin: 2.5rem auto; padding: 0 1rem; }
         
         .card {
             background: white;
@@ -91,10 +143,20 @@
 <body>
 
     <header>
-        <h1>FM Elec - Montpellier</h1>
-        <p>Votre électricien professionnel en urgence et rénovation</p>
-        <!-- Remplace le 0600000000 par ton vrai numéro si besoin -->
-        <a href="tel:0652634286" class="cta-phone">📞 06 52 63 42 86</a>
+        <div class="header-content">
+            <!-- Ton logo -->
+            <img src="logo.png" alt="Logo FM Elec" class="logo-img">
+            <div>
+                <h1>FM Elec - Montpellier</h1>
+                <p>Votre électricien professionnel en urgence et rénovation</p>
+            </div>
+            <div class="badge-devis">✨ Devis et Déplacements 100% Gratuits</div>
+            
+            <div class="header-buttons">
+                <a href="tel:0652634286" class="cta-phone">📞 06 52 63 42 86</a>
+                <a href="#devis" class="cta-scroll">📝 Demandez votre devis</a>
+            </div>
+        </div>
     </header>
 
     <div class="container">
@@ -125,7 +187,8 @@
             </div>
         </div>
 
-        <div class="card">
+        <!-- Le formulaire avec l'ancre id="devis" pour le bouton du haut -->
+        <div class="card" id="devis">
             <h2>Demande de Devis Gratuit</h2>
             <p style="margin-bottom: 1.5rem; color: #64748b; font-size: 0.95rem;">Remplissez le formulaire ci-dessous pour recevoir une estimation rapide directement sur notre boîte mail.</p>
             
